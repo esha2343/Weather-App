@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    border: none;
+}
+
+:root{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+/* Tab-conatiner*/
+
+.Tab-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+
+}
+
+.tab.current_Tab{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 6px;
+}
+
+/* weather container*/
+
+.weather-container{
+    margin-block: 5rem; 
+} 
+
+
+/* grant access container */
+
+.grantAccessBtn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--colorLight2);
+    background-color: var(--colorDark2);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display:none;
+}
+.grant-location-container.active{
+    display:flex;
+}
+.grant-location-container img{
+    margin-bottom: 2rem;
+    background : transparent;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85px;
+    font-weight: 500;
+    margin-top: 0.75;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+/* loading screen */
+
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+    margin-block: 20px;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* userInfo container */
+
+.show-weather-container{
+    display: none;
+}
+
+.show-weather-container.active{
+    display: flex;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.name p{
+    font-size: 2rem;
+}
+
+.show-weather-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.show-weather-container img{
+    width: 90px;
+    height: 90px;
+}
+
+.show-weather-container p[data-img]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    /* width: 50%; */
+    max-width: 250px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px 0;
+    align-items: center;
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+    /* object-fit: cover; */
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+/* search form */
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 50px auto;
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 10px;
+}
+
+.form-container input::placeholder{
+    /* color: rgba(225,255,255,.07); */
+    color: white;
+    letter-spacing: 1.65px;
+    
+}
+
+.form-container input:focus{
+    outline: 3px sloid rgba(255,255,255,0.7);
+}
+
+.form-container .btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%; 
+    font-size: 16px;
+}
